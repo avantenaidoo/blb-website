@@ -1,5 +1,6 @@
 import './style.css';
 import { renderHeader, initHeader } from './components/header.js';
+import { renderHero } from './components/hero.js';
 
 import {
     THEMES,
@@ -16,10 +17,8 @@ ${renderHeader()}
 
 
   <main>
-        <section id="home" class="section container">
-            <h1>Welcome to BLB Digital Marketing</h1>
-            <p>Your digital marketing journey starts here.</p>
-        </section>
+
+        ${renderHero()}
 
         <section id="services" class="section container">
             <h2>Services</h2>
