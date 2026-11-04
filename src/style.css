@@ -435,8 +435,6 @@ textarea {
   }
 }
 
-/* Header and Navigation */
-
 /* Header and navigation */
 
 .site-header {
@@ -458,22 +456,16 @@ textarea {
 
 .site-brand {
   display: flex;
-  flex-direction: column;
-  color: var(--text-heading);
+  align-items: center;
+  flex-shrink: 0;
   text-decoration: none;
-  line-height: 1.1;
 }
 
-.site-brand-name {
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.site-brand-description {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
+.site-logo {
+  display: block;
+  width: auto;
+  height: 70px;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -588,10 +580,6 @@ textarea {
 }
 
 @media (max-width: 480px) {
-  .site-brand-description {
-    font-size: 0.65rem;
-  }
-
   .theme-toggle {
     font-size: 0.75rem;
   }

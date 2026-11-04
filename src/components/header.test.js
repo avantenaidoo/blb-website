@@ -6,11 +6,12 @@ import {
 } from './header.js';
 
 describe('header component', () => {
-    it('renders the BLB brand', () => {
+    it('renders the BLB logo', () => {
         const header = renderHeader();
 
-        expect(header).toContain('BLB');
-        expect(header).toContain('Digital Marketing');
+        expect(header).toContain('class="site-logo"');
+        expect(header).toContain('alt="BLB Digital Marketing"');
+        expect(header).toContain('src="');
     });
 
     it('renders the main navigation links', () => {

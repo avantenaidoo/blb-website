@@ -1,11 +1,15 @@
+import blbLogo from '../assets/blb-logo.jpeg';
 
 export function renderHeader() {
     return `
         <header class="site-header">
             <div class="container header-inner">
                 <a class="site-brand" href="#home" aria-label="BLB Digital Marketing home">
-                    <span class="site-brand-name">BLB</span>
-                    <span class="site-brand-description">Digital Marketing</span>
+                    <img
+                        src="${blbLogo}"
+                        alt="BLB Digital Marketing"
+                        class="site-logo"
+                    >
                 </a>
 
                 <button
