@@ -32,6 +32,15 @@ export function renderHeader() {
                     <a href="#portfolio">Portfolio</a>
                     <a href="#contact">Contact</a>
                 </nav>
+
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    aria-pressed="false"
+                >
+                    Dark mode
+                </button>
             </div>
         </header>
     `;
@@ -47,29 +56,32 @@ export function setMenuOpen(menuButton, navigation, isOpen) {
     );
 }
 
-export function initHeader(root = document) {
+export function initHeader(root = document, onThemeToggle = () => { }) {
     const menuButton = root.querySelector('.menu-toggle');
     const navigation = root.querySelector('.site-nav');
+    const themeButton = root.querySelector('.theme-toggle');
 
-    if (!menuButton || !navigation) {
-        return;
+    if (menuButton && navigation) {
+        menuButton.addEventListener('click', () => {
+            const isOpen = menuButton.getAttribute('aria-expanded') !== 'true';
+
+            setMenuOpen(menuButton, navigation, isOpen);
+        });
+
+        navigation.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                setMenuOpen(menuButton, navigation, false);
+            });
+        });
+
+        root.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                setMenuOpen(menuButton, navigation, false);
+            }
+        });
     }
 
-    menuButton.addEventListener('click', () => {
-        const isOpen = menuButton.getAttribute('aria-expanded') !== 'true';
-
-        setMenuOpen(menuButton, navigation, isOpen);
-    });
-
-    navigation.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            setMenuOpen(menuButton, navigation, false);
-        });
-    });
-
-    root.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            setMenuOpen(menuButton, navigation, false);
-        }
-    });
+    if (themeButton) {
+        themeButton.addEventListener('click', onThemeToggle);
+    }
 }

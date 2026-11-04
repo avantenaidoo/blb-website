@@ -440,115 +440,161 @@ textarea {
 /* Header and navigation */
 
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 80px;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  gap: 2rem;
 }
 
 .site-brand {
-    display: flex;
-    flex-direction: column;
-    color: var(--text-heading);
-    text-decoration: none;
-    line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-heading);
+  text-decoration: none;
+  line-height: 1.1;
 }
 
 .site-brand-name {
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .site-brand-description {
-    margin-top: 0.25rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
 }
 
 .site-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .site-nav a {
-    color: var(--text);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
-    padding: 8px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: transparent;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
 }
 
 .menu-toggle span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--text-heading);
-    border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-heading);
+  border-radius: 2px;
 }
 
 /* Mobile navigation */
 
 @media (max-width: 768px) {
-    .header-inner {
-        position: relative;
-        min-height: 72px;
-    }
+  .header-inner {
+    position: relative;
+    min-height: 72px;
+  }
 
-    .menu-toggle {
-        display: flex;
-    }
+  .menu-toggle {
+    display: flex;
+  }
 
-    .site-nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 0.5rem 1rem;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-top: 0;
-        box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
-    }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 0;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
+  }
 
-    .site-nav[hidden] {
-        display: flex;
-    }
+  .site-nav[hidden] {
+    display: flex;
+  }
 
-    .site-nav a {
-        padding: 0.85rem 0;
-    }
+  .site-nav a {
+    padding: 0.85rem 0;
+  }
+}
+
+/* Theme toggle */
+
+/* Theme toggle */
+
+.theme-toggle {
+  flex-shrink: 0;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  background: var(--accent-bg);
+  color: var(--text-heading);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    gap: 0.75rem;
+  }
+
+  .theme-toggle {
+    padding: 0.55rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-brand-description {
+    font-size: 0.65rem;
+  }
+
+  .theme-toggle {
+    font-size: 0.75rem;
+  }
 }

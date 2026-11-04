@@ -1,5 +1,13 @@
 import './style.css';
-import { renderHeader, initHeader } from './components/header';
+import { renderHeader, initHeader } from './components/header.js';
+
+import {
+    THEMES,
+    getInitialTheme,
+    getNextTheme,
+    saveTheme,
+    applyTheme
+} from './utils/theme.js';
 
 const app = document.querySelector('#app');
 
@@ -30,3 +38,32 @@ ${renderHeader()}
         </section>
   </main>
 `;
+
+const themeButton = app.querySelector('.theme-toggle');
+
+let currentTheme = getInitialTheme(
+    window.localStorage,
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+);
+
+function updateTheme(theme) {
+    currentTheme = theme;
+
+    applyTheme(currentTheme, document.documentElement);
+    saveTheme(currentTheme, window.localStorage);
+
+    themeButton.setAttribute(
+        'aria-pressed',
+        String(currentTheme === THEMES.DARK)
+    );
+
+    themeButton.textContent =
+        currentTheme === THEMES.DARK ? 'Light mode' : 'Dark mode';
+}
+
+updateTheme(currentTheme);
+
+initHeader(app, () => {
+    const nextTheme = getNextTheme(currentTheme);
+    updateTheme(nextTheme);
+});

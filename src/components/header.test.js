@@ -67,4 +67,19 @@ describe('header component', () => {
             'Open navigation menu'
         );
     });
+
+
+    it('renders the theme toggle button', () => {
+        const header = renderHeader();
+
+        expect(header).toContain('class="theme-toggle"');
+        expect(header).toContain('aria-label="Toggle dark mode"');
+    });
+
+    it('initially marks the dark theme as inactive', () => {
+        const header = renderHeader();
+
+        expect(header).toContain('aria-pressed="false"');
+    });
+
 });
