@@ -545,15 +545,13 @@ textarea {
   }
 
   .site-nav[hidden] {
-    display: flex;
+    display: none;
   }
 
   .site-nav a {
     padding: 0.85rem 0;
   }
 }
-
-/* Theme toggle */
 
 /* Theme toggle */
 
