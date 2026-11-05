@@ -181,7 +181,6 @@ ol {
 
 #app {
   width: 100%;
-  max-width: var(--container-width);
   min-height: 100vh;
   margin: 0 auto;
 }
