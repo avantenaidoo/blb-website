@@ -746,6 +746,29 @@ textarea {
   }
 }
 
+/* =========================================
+   About Us
+========================================= */
+
+.about-section h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h3 {
+    margin-bottom: 1rem;
+    color: #fe7f2d;
+}
+
+.about-content p {
+    margin-bottom: 0;
+}
 
 /* footer */
 

@@ -3,6 +3,7 @@ import { renderHeader, initHeader } from './components/header.js';
 import { renderHero } from './components/hero.js';
 import { renderFooter } from './components/footer.js';
 import { renderServices, initServices } from './components/services.js';
+import { renderAbout } from './components/about.js';
 
 import {
     THEMES,
@@ -24,9 +25,7 @@ ${renderHeader()}
 
         ${renderServices()}
 
-        <section id="about" class="section container">
-            <h2>About</h2>
-        </section>
+        ${renderAbout()}
 
 <!-- Hidden portfolio section for use later 
         <section id="portfolio" class="section container">
