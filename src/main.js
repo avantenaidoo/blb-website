@@ -4,6 +4,7 @@ import { renderHero } from './components/hero.js';
 import { renderFooter } from './components/footer.js';
 import { renderServices, initServices } from './components/services.js';
 import { renderAbout } from './components/about.js';
+import { renderContact } from './components/contact.js';
 
 import {
     THEMES,
@@ -32,10 +33,7 @@ ${renderHeader()}
             <h2>Portfolio</h2>
         </section>
 -->
-
-        <section id="contact" class="section container">
-            <h2>Contact</h2>
-        </section>
+        ${renderContact()}
   </main>
 
   ${renderFooter()}

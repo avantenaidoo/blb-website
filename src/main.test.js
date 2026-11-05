@@ -2,6 +2,9 @@
 import { describe, it, expect } from 'vitest';
 import { renderHeader } from './components/header.js';
 import { renderHero } from './components/hero.js';
+import { renderServices } from './components/services.js';
+import { renderAbout } from './components/about.js';
+import { renderContact } from './components/contact.js';
 import { renderFooter } from './components/footer.js';
 
 describe('main application', () => {
@@ -18,18 +21,27 @@ describe('main application', () => {
         expect(hero).toContain('id="home"');
     });
 
-    it('includes all main website sections', () => {
+    it('includes all active website sections', () => {
         const sections = [
             'home',
             'services',
             'about',
-            'portfolio',
             'contact'
         ];
 
         sections.forEach((section) => {
             expect(section).toBeTruthy();
         });
+    });
+
+    it('does not include the Portfolio section', () => {
+        const portfolio = `
+            ${renderHeader()}
+            ${renderHero()}
+            ${renderFooter()}
+        `;
+
+        expect(portfolio).not.toContain('id="portfolio"');
     });
 
     it('renders the footer', () => {

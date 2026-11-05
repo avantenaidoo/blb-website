@@ -246,6 +246,8 @@ h3 {
 }
 
 p {
+  font-size: 1.1rem;
+  line-height: 1.7;
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -838,4 +840,106 @@ textarea {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* =========================================
+   Contact
+========================================= */
+
+.contact-section > .container > h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-section h3 {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-heading);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--accent);
+}
+
+.contact-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* contact image */
+
+.contact-image {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -80px;
+    margin-bottom: 2rem;
+}
+
+.contact-image img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    transform: rotate(-40deg);
+}
+
+/* Contact tagline */
+
+.contact-tagline {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.tagline-build,
+.tagline-lead,
+.tagline-unforgettable {
+    color: var(--text-heading);
+}
+
+.tagline-highlight {
+    color: var(--brand-orange);
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-tagline {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
