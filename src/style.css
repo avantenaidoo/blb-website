@@ -509,6 +509,10 @@ textarea {
   border-radius: 2px;
 }
 
+.nav-portfolio {
+  display: none;
+}
+
 /* Mobile navigation */
 
 @media (max-width: 768px) {

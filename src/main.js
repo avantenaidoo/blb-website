@@ -28,9 +28,11 @@ ${renderHeader()}
             <h2>About</h2>
         </section>
 
+<!-- Hidden portfolio section for use later 
         <section id="portfolio" class="section container">
             <h2>Portfolio</h2>
         </section>
+-->
 
         <section id="contact" class="section container">
             <h2>Contact</h2>
