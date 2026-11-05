@@ -2,6 +2,7 @@ import './style.css';
 import { renderHeader, initHeader } from './components/header.js';
 import { renderHero } from './components/hero.js';
 import { renderFooter } from './components/footer.js';
+import { renderServices, initServices } from './components/services.js';
 
 import {
     THEMES,
@@ -21,9 +22,7 @@ ${renderHeader()}
 
         ${renderHero()}
 
-        <section id="services" class="section container">
-            <h2>Services</h2>
-        </section>
+        ${renderServices()}
 
         <section id="about" class="section container">
             <h2>About</h2>
@@ -40,6 +39,8 @@ ${renderHeader()}
 
   ${renderFooter()}
 `;
+
+initServices(app);
 
 const themeButton = app.querySelector('.theme-toggle');
 

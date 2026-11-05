@@ -613,6 +613,135 @@ textarea {
   gap: 1rem;
 }
 
+
+/* =========================================
+   Services
+========================================= */
+
+.services-section {
+  overflow: hidden;
+}
+
+.services-section h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Image switcher */
+
+.services-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.services-slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Individual service image */
+
+.service-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.service-slide[hidden] {
+  display: none;
+}
+
+.service-slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Navigation arrows */
+
+.services-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(1, 24, 38, 0.65);
+  color: var(--brand-white);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease;
+}
+
+.services-arrow-prev {
+  left: 12px;
+}
+
+.services-arrow-next {
+  right: 12px;
+}
+
+.services-arrow:hover {
+  background-color: rgba(254, 127, 45, 0.8);
+}
+
+.services-arrow:focus-visible {
+  outline: 2px solid var(--brand-orange);
+  outline-offset: 4px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .service-slide img {
+    max-height: 400px;
+  }
+
+  .services-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .service-slide img {
+    max-height: 300px;
+  }
+
+  .services-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .services-arrow-prev {
+    left: 8px;
+  }
+
+  .services-arrow-next {
+    right: 8px;
+  }
+}
+
+
 /* footer */
 
 .site-footer {
