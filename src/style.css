@@ -863,7 +863,12 @@ textarea {
     margin-bottom: 2rem;
 }
 
+/* Contact email links */
+
 .contact-links {
+    position: relative;
+    z-index: 2;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -872,11 +877,17 @@ textarea {
 }
 
 .contact-link {
+    position: relative;
+    z-index: 2;
+
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
+
     color: var(--text-heading);
     font-weight: 600;
+    cursor: pointer;
+
     transition: color 0.2s ease;
 }
 
@@ -889,9 +900,12 @@ textarea {
     outline-offset: 4px;
 }
 
-/* contact image */
+/* Contact image */
 
 .contact-image {
+    position: relative;
+    z-index: 1;
+
     display: flex;
     justify-content: flex-end;
     margin-top: -80px;
