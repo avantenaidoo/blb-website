@@ -10,18 +10,20 @@ describe('hero component', () => {
         expect(hero).toContain('class="hero"');
     });
 
-    it('renders the main headline', () => {
+    it('renders the hero image', () => {
         const hero = renderHero();
 
-        expect(hero).toContain('Build Your Brand.');
-        expect(hero).toContain('Grow Your Digital Presence.');
+        expect(hero).toContain('class="hero-image"');
+        expect(hero).toContain('alt="BLB Digital Marketing"');
+        expect(hero).toContain('src="');
     });
 
-    it('renders the supporting description', () => {
+    it('places the image before the action buttons', () => {
         const hero = renderHero();
 
-        expect(hero).toContain('effective digital marketing');
-        expect(hero).toContain('compelling content');
+        expect(hero.indexOf('class="hero-image"')).toBeLessThan(
+            hero.indexOf('class="hero-actions"')
+        );
     });
 
     it('renders the contact call-to-action', () => {
