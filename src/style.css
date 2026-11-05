@@ -546,9 +546,10 @@ textarea {
   }
 }
 
-/* Theme toggle */
+/* Theme toggle hidden*/
 
 .theme-toggle {
+  display: none;
   flex-shrink: 0;
   padding: 0.65rem 1rem;
   border: 1px solid var(--accent-border);
