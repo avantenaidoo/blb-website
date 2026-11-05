@@ -1,6 +1,7 @@
 import './style.css';
 import { renderHeader, initHeader } from './components/header.js';
 import { renderHero } from './components/hero.js';
+import { renderFooter } from './components/footer.js';
 
 import {
     THEMES,
@@ -36,6 +37,8 @@ ${renderHeader()}
             <h2>Contact</h2>
         </section>
   </main>
+
+  ${renderFooter()}
 `;
 
 const themeButton = app.querySelector('.theme-toggle');
