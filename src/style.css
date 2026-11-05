@@ -466,6 +466,7 @@ textarea {
   width: auto;
   height: 70px;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .site-nav {
