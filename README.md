@@ -13,7 +13,6 @@ The project focuses on clean design, reusable JavaScript components, responsive 
 - About section presenting the business and its services.
 - Contact section with direct email links for digital marketing and website development enquiries.
 - Responsive navigation with a mobile menu.
-- Light and dark theme styling, including system colour-scheme support.
 - Accessible navigation and interactive elements.
 
 ## Technologies Used
