@@ -25,9 +25,9 @@ ${renderHeader()}
 
         ${renderHero()}
 
-        ${renderServices()}
-
         ${renderAbout()}
+
+        ${renderServices()}
 
 <!-- Hidden portfolio section for use later 
         <section id="portfolio" class="section container">
