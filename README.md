@@ -4,6 +4,10 @@ A responsive business website developed for **BLB Digital Marketing**, showcasin
 
 The project focuses on clean design, reusable JavaScript components, responsive layouts and maintainable code.
 
+## Live Website
+
+[**Visit BLB Digital Marketing**](https://blbdigitalmarketing.onrender.com)
+
 ## Features
 
 - Responsive layout for desktop, tablet and mobile devices.
@@ -80,6 +84,4 @@ The website is under active development.
 
 ## Author
 
-Developed by **Avante Naidoo**.
-
-[GitHub Profile](https://github.com/avantenaidoo)
+Developed by [**Avante**](https://avanteportfolio.vercel.app/)
