@@ -6,13 +6,14 @@ import { renderServices, initServices } from './components/services.js';
 import { renderAbout } from './components/about.js';
 import { renderContact } from './components/contact.js';
 
-import {
-    THEMES,
-    getInitialTheme,
-    getNextTheme,
-    saveTheme,
-    applyTheme
-} from './utils/theme.js';
+// Comment out Theme for use later
+// import {
+//     THEMES,
+//     getInitialTheme,
+//     getNextTheme,
+//     saveTheme,
+//     applyTheme
+// } from './utils/theme.js';
 
 const app = document.querySelector('#app');
 
@@ -40,6 +41,8 @@ ${renderHeader()}
 `;
 
 initServices(app);
+
+/* Theme functionality temporarily disabled
 
 const themeButton = app.querySelector('.theme-toggle');
 
@@ -69,3 +72,7 @@ initHeader(app, () => {
     const nextTheme = getNextTheme(currentTheme);
     updateTheme(nextTheme);
 });
+
+*/
+
+initHeader(app);

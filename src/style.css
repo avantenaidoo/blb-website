@@ -62,12 +62,12 @@
 }
 
 /* -----------------------------------------
-   2. Automatic Dark Theme
+   2. Automatic Dark Theme temporarily paused
    Used when the visitor prefers dark mode
    and has not manually selected a theme.
 ----------------------------------------- */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --bg: var(--brand-navy);
     --surface: #082536;
@@ -85,7 +85,7 @@
 
     color-scheme: dark;
   }
-}
+} */
 
 /* -----------------------------------------
    3. Manual Theme Selection
