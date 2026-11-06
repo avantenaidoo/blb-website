@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '/blb-website/'
+    base: process.env.GITHUB_PAGES ? '/blb-website/' : '/',
 });
