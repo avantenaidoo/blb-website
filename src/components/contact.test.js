@@ -72,7 +72,7 @@ describe('renderContact', () => {
         );
 
         expect(html).toContain(
-            'Click here for Website Development'
+            'Click here for Websites'
         );
     });
 

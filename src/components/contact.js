@@ -55,7 +55,7 @@ export function renderContact() {
                         <a
                             href="mailto:avante.naidoo@gmail.com"
                             class="contact-link"
-                            aria-label="Email us about Website Development"
+                            aria-label="Email us about Websites"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export function renderContact() {
                                 <path d="m3 7 9 6 9-6"/>
                             </svg>
 
-                            <span>Click here for Website Development</span>
+                            <span>Click here for Websites</span>
                         </a>
 
                     </div>
