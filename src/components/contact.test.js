@@ -64,7 +64,7 @@ describe('renderContact', () => {
         );
 
         expect(html).toContain(
-            'mailto:avante.naidoo@gmail.com'
+            'mailto:hello.blbdm1@gmail.com'
         );
 
         expect(html).toContain(

@@ -53,7 +53,7 @@ export function renderContact() {
                         </a>
 
                         <a
-                            href="mailto:avante.naidoo@gmail.com"
+                            href="mailto:hello.blbdm1@gmail.com"
                             class="contact-link"
                             aria-label="Email us about Websites"
                         >
