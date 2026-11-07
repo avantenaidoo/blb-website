@@ -76,13 +76,75 @@ describe('renderContact', () => {
         );
     });
 
+
     it('renders an accessible email icon for each contact link', () => {
         const html = renderContact();
 
-        const iconCount = (html.match(/<svg/g) || []).length;
+        const emailLinks = html.split(
+            '<div class="contact-links">'
+        )[1].split('</div>')[0];
+
+        const iconCount = (emailLinks.match(/<svg/g) || []).length;
 
         expect(iconCount).toBe(2);
-        expect(html.match(/aria-hidden="true"/g)).toHaveLength(2);
+        expect(emailLinks.match(/aria-hidden="true"/g)).toHaveLength(2);
+    });
+
+    it('renders Facebook and Instagram social media links', () => {
+        const html = renderContact();
+
+        expect(html).toContain(
+            'href="https://www.facebook.com/blbdigitalmarketing"'
+        );
+
+        expect(html).toContain(
+            'href="https://www.instagram.com/blbdigitalmarketing/"'
+        );
+    });
+
+    it('opens social media links in a new tab securely', () => {
+        const html = renderContact();
+
+        const socialLinks = html.match(
+            /<a(?=[^>]*class="social-link")[^>]*>/g
+        );
+
+        expect(socialLinks).toHaveLength(2);
+
+        socialLinks.forEach((link) => {
+            expect(link).toContain('target="_blank"');
+            expect(link).toContain('rel="noopener noreferrer"');
+        });
+    });
+
+    it('renders accessible Facebook and Instagram icons', () => {
+        const html = renderContact();
+
+        expect(html).toContain(
+            'aria-label="Visit our Facebook page"'
+        );
+
+        expect(html).toContain(
+            'aria-label="Visit our Instagram page"'
+        );
+
+        const socialLinksSection = html.split(
+            '<div class="social-links">'
+        )[1].split('</div>')[0];
+
+        expect(socialLinksSection.match(/<svg/g)).toHaveLength(2);
+        expect(socialLinksSection.match(/aria-hidden="true"/g))
+            .toHaveLength(2);
+    });
+
+    it('renders social media links between the contact image and tagline', () => {
+        const html = renderContact();
+
+        expect(html.indexOf('class="contact-image"'))
+            .toBeLessThan(html.indexOf('class="social-links"'));
+
+        expect(html.indexOf('class="social-links"'))
+            .toBeLessThan(html.indexOf('class="contact-tagline"'));
     });
 
     it('renders the Contact image before the tagline', () => {
