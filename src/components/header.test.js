@@ -18,8 +18,8 @@ describe('header component', () => {
         const header = renderHeader();
 
         expect(header).toContain('href="#home"');
-        expect(header).toContain('href="#services"');
         expect(header).toContain('href="#about"');
+        expect(header).toContain('href="#services"');
         expect(header).toContain('href="#portfolio"');
         expect(header).toContain('href="#contact"');
     });
